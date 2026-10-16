@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# Loan Risk Prediction Using Machine Learning
-
-## 1. Project Overview
+1. Project Overview
 
 The **Loan Risk Prediction Using Machine Learning** project is an enterprise web application designed to evaluate loan applicant data and predict credit/loan risk using a machine learning model. The system integrates a traditional Java/Jakarta EE web application with a specialized Python-based machine learning inference service, backed by persistent operational storage (Oracle Database or In-Memory development storage).
 
