@@ -1,0 +1,64 @@
+# ==============================================================================
+# Java & Apache Ant Build Outputs
+# ==============================================================================
+build/
+dist/
+target/
+*.class
+*.war
+*.ear
+*.jar
+
+# ==============================================================================
+# NetBeans IDE Machine-Specific & Private Configuration
+# Note: Keep shareable project files (project.xml, project.properties, build-impl.xml)
+# ==============================================================================
+nbproject/private/
+nbproject/build-impl.xml.bak
+nbproject/genfiles.properties.bak
+
+# ==============================================================================
+# Python & Virtual Environments
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# Environment Configuration & Secrets
+# ==============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+secrets/
+
+# ==============================================================================
+# Logs & Operating System Clutter
+# ==============================================================================
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# Note: ML model artifacts (.joblib, .pkl) are NOT blanket-ignored per project policy.
