@@ -4,375 +4,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loan Default Risk Prediction — AI-Powered Analytics Workspace</title>
+    <title>LoanLens — Loan Quality Analytics</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="ll-page-wrap">
 
-<!-- Ambient Ambient Technical Background Layers -->
-<div class="ambient-bg" aria-hidden="true">
-    <div class="bg-grid"></div>
-    <div class="mesh-layer mesh-indigo"></div>
-    <div class="mesh-layer mesh-teal"></div>
-    <div class="mesh-layer mesh-ambient"></div>
-</div>
+    <!-- Ambient Technical Background Mesh -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="mesh-layer mesh-indigo"></div>
+        <div class="mesh-layer mesh-teal"></div>
+        <div class="mesh-layer mesh-ambient"></div>
+    </div>
 
-<div class="app-shell">
+    <!-- Header Navigation Bar -->
+    <header class="ll-header">
+        <div class="ll-container">
+            <div class="ll-header-inner">
+                <a href="index.jsp" class="ll-brand" aria-label="LoanLens Home">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="ll-brand-icon" aria-hidden="true">
+                        <circle cx="16" cy="16" r="13" stroke="url(#llLogoGrad)" stroke-width="2" stroke-dasharray="3 2" />
+                        <circle cx="16" cy="16" r="7" stroke="#69E4D0" stroke-width="2" />
+                        <circle cx="16" cy="16" r="2.5" fill="#F0F5FF" />
+                        <line x1="3" y1="16" x2="8" y2="16" stroke="#69E4D0" stroke-width="2" stroke-linecap="round" />
+                        <line x1="24" y1="16" x2="29" y2="16" stroke="#8293FF" stroke-width="2" stroke-linecap="round" />
+                        <defs>
+                            <linearGradient id="llLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#69E4D0" />
+                                <stop offset="100%" stop-color="#8293FF" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="ll-brand-meta">
+                        <div class="ll-wordmark">Loan<span class="ll-accent-text">Lens</span></div>
+                        <div class="ll-brand-subtitle">LOAN QUALITY ANALYTICS</div>
+                    </div>
+                </a>
 
-    <!-- Section A: Top Navigation & Operational Status Header -->
-    <header class="top-header" data-reveal="down">
-        <div class="brand-group">
-            <div class="brand-logo" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                    <circle cx="12" cy="12" r="3"/>
-                </svg>
-            </div>
-            <div class="brand-text">
-                <div class="brand-title">LOAN EVALUATION <span class="brand-divider">/</span> INTELLIGENCE WORKSPACE</div>
-                <div class="brand-subtitle">Model-Assisted Evaluation &amp; Analytics</div>
-            </div>
-        </div>
-
-        <!-- Runtime Operational Status Indicators -->
-        <div class="status-group">
-            <div class="status-pill">
-                <span class="status-dot dot-storage" aria-hidden="true"></span>
-                <span id="storageModeBadge" class="status-badge badge-memory">STORAGE: INITIALIZING...</span>
-                <span id="storageDesc" class="status-detail">Checking active persistence mode...</span>
-            </div>
-            <div class="status-pill">
-                <span class="status-dot dot-ml" aria-hidden="true"></span>
-                <span id="mlProviderBadge" class="status-badge badge-mock">PROVIDER: SIMULATED (MOCK-V1)</span>
+                <div class="ll-header-actions">
+                    <span class="ll-badge-demo">
+                        <span class="ll-badge-dot" aria-hidden="true"></span>
+                        DEVELOPMENT DEMO
+                    </span>
+                    <a href="workspace.jsp" class="ll-header-nav-link">
+                        Enter Workspace <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Section B: Compact Animated Technical Hero -->
-    <section class="gb-hero" id="gbHero">
-        <div class="gb-grid" aria-hidden="true"></div>
-        <div class="gb-spot" id="gbSpot" aria-hidden="true"></div>
-        <div class="gb-fade" aria-hidden="true"></div>
+    <!-- Hero Section with Animated Lens & Introduction -->
+    <main>
+        <section class="ll-hero" id="llHero" aria-label="Product Introduction">
+            <div class="ll-hero-spotlight" id="llSpotlight" aria-hidden="true"></div>
+            <div class="ll-hero-grid-canvas" aria-hidden="true"></div>
 
-        <div class="gb-content">
-            <div class="hero-eyebrow">
-                <span class="eyebrow-chip">FINANCIAL ANALYTICS</span>
-                <span class="eyebrow-sep">/</span>
-                <span>MODEL-ASSISTED EVALUATION</span>
-            </div>
+            <div class="ll-container">
+                <div class="ll-hero-content">
 
-            <h1 class="hero-headline">A clearer view of loan evaluation.</h1>
+                    <!-- Animated Analytical Lens Visual -->
+                    <div class="ll-lens-stage" aria-hidden="true">
+                        <svg class="ll-lens-svg" viewBox="0 0 320 320" width="280" height="280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="llLensGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#69E4D0" stop-opacity="0.95" />
+                                    <stop offset="100%" stop-color="#8293FF" stop-opacity="0.95" />
+                                </linearGradient>
+                                <linearGradient id="llRayGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+                                    <stop offset="0%" stop-color="#69E4D0" stop-opacity="0" />
+                                    <stop offset="50%" stop-color="#69E4D0" stop-opacity="0.95" />
+                                    <stop offset="100%" stop-color="#8293FF" stop-opacity="0" />
+                                </linearGradient>
+                                <radialGradient id="llGlowGrad" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#69E4D0" stop-opacity="0.25" />
+                                    <stop offset="60%" stop-color="#8293FF" stop-opacity="0.08" />
+                                    <stop offset="100%" stop-color="#080F1F" stop-opacity="0" />
+                                </radialGradient>
+                            </defs>
 
-            <p class="hero-subtitle">
-                Explore loan application features, inspect a model response, and trace the recorded result in one transparent workflow.
-            </p>
+                            <!-- Ambient lens center glow -->
+                            <circle cx="160" cy="160" r="110" fill="url(#llGlowGrad)" class="ll-lens-core-glow" />
 
-            <!-- Architectural sequence indicator -->
-            <div class="workflow-steps" aria-label="Application Evaluation Lifecycle">
-                <div class="step-item">
-                    <span class="step-num">01</span>
-                    <span class="step-name">INPUT</span>
-                </div>
-                <span class="step-arrow" aria-hidden="true">→</span>
-                <div class="step-item">
-                    <span class="step-num">02</span>
-                    <span class="step-name">INFERENCE</span>
-                </div>
-                <span class="step-arrow" aria-hidden="true">→</span>
-                <div class="step-item">
-                    <span class="step-num">03</span>
-                    <span class="step-name">RECORD</span>
-                </div>
-            </div>
-        </div>
-    </section>
+                            <!-- Outer dashed calibration orbit -->
+                            <circle cx="160" cy="160" r="126" stroke="#27364C" stroke-width="1.5" stroke-dasharray="4 8" class="ll-lens-outer-orbit" />
 
-    <!-- Persistent Demonstration & Simulation Disclaimer Banner -->
-    <div class="disclaimer-banner" role="region" aria-label="Demonstration Notice" data-reveal="up">
-        <div class="disclaimer-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
-                <line x1="12" y1="9" x2="12" y2="13"/>
-                <line x1="12" y1="17" x2="12.01" y2="17"/>
-            </svg>
-        </div>
-        <div class="disclaimer-text">
-            <strong>DEMONSTRATION &amp; SIMULATED ENVIRONMENT NOTICE:</strong>
-            This system operates in development mode using a simulated heuristic provider (<code>mock-v1-simulated</code>).
-            Scores <strong>do not</strong> represent actual credit underwriting approvals or legal default determinations.
-            Target class <code>B</code> reflects the training dataset label and is not a verified financial loan default.
-        </div>
-    </div>
+                            <!-- Reticle crosshair ticks -->
+                            <line x1="160" y1="20" x2="160" y2="36" stroke="#69E4D0" stroke-width="1.5" stroke-linecap="round" class="ll-lens-tick" />
+                            <line x1="160" y1="284" x2="160" y2="300" stroke="#69E4D0" stroke-width="1.5" stroke-linecap="round" class="ll-lens-tick" />
+                            <line x1="20" y1="160" x2="36" y2="160" stroke="#8293FF" stroke-width="1.5" stroke-linecap="round" class="ll-lens-tick" />
+                            <line x1="284" y1="160" x2="300" y2="160" stroke="#8293FF" stroke-width="1.5" stroke-linecap="round" class="ll-lens-tick" />
 
-    <!-- Global Alert Notification Area -->
-    <div id="globalAlert" class="alert alert-danger" role="alert"></div>
+                            <!-- Primary optical lens ring with animated stroke-dash -->
+                            <circle cx="160" cy="160" r="92" stroke="url(#llLensGrad)" stroke-width="2.5" class="ll-lens-ring-primary" stroke-linecap="round" />
 
-    <!-- Main Interactive Two-Column Analytics Layout -->
-    <main class="layout-grid">
+                            <!-- Inner rotating analytical iris -->
+                            <circle cx="160" cy="160" r="54" stroke="#8293FF" stroke-width="1.5" stroke-dasharray="6 6" class="ll-lens-ring-inner" />
 
-        <!-- Column 1: Application Form Card -->
-        <section class="card spotlight-card form-card" id="formCard" data-reveal="up">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="card-header-clean">
-                <div>
-                    <h2 class="card-title">Loan Applicant Evaluation Form</h2>
-                    <p class="card-subtitle">Submit the nine required applicant features to persist the application and receive model prediction output.</p>
-                </div>
-            </div>
+                            <!-- Signal beam passing through lens -->
+                            <line x1="28" y1="160" x2="292" y2="160" stroke="url(#llRayGrad)" stroke-width="2" class="ll-lens-beam" stroke-linecap="round" />
 
-            <!-- Quick-Fill Synthetic Sample Buttons -->
-            <div class="quick-fill-bar" aria-label="Demo sample autofill">
-                <span class="quick-fill-label">Synthetic Inputs:</span>
-                <button type="button" id="btnSampleLow" class="btn-sample">
-                    <span class="sample-dot" aria-hidden="true"></span>
-                    Synthetic Example 1
-                </button>
-                <button type="button" id="btnSampleHigh" class="btn-sample">
-                    <span class="sample-dot" aria-hidden="true"></span>
-                    Synthetic Example 2
-                </button>
-            </div>
+                            <!-- Connected analytical data nodes -->
+                            <g class="ll-lens-nodes">
+                                <circle cx="95" cy="108" r="4.5" fill="#69E4D0" class="ll-lens-node ll-node-1" />
+                                <circle cx="225" cy="108" r="3.5" fill="#8293FF" class="ll-lens-node ll-node-2" />
+                                <circle cx="205" cy="212" r="4" fill="#69E4D0" class="ll-lens-node ll-node-3" />
+                                <circle cx="115" cy="212" r="3" fill="#8293FF" class="ll-lens-node ll-node-4" />
 
-            <form id="loanForm" novalidate>
+                                <line x1="95" y1="108" x2="160" y2="160" stroke="rgba(105, 228, 208, 0.4)" stroke-width="1" stroke-dasharray="3 3" />
+                                <line x1="225" y1="108" x2="160" y2="160" stroke="rgba(130, 147, 255, 0.4)" stroke-width="1" stroke-dasharray="3 3" />
+                                <line x1="205" y1="212" x2="160" y2="160" stroke="rgba(105, 228, 208, 0.4)" stroke-width="1" stroke-dasharray="3 3" />
+                                <line x1="115" y1="212" x2="160" y2="160" stroke="rgba(130, 147, 255, 0.4)" stroke-width="1" stroke-dasharray="3 3" />
+                            </g>
 
-                <!-- Section 1: Financial & Loan Parameters -->
-                <div class="form-section">
-                    <div class="form-section-header">
-                        <span class="section-badge">01</span>
-                        <span class="form-section-title">Financial &amp; Loan Parameters</span>
+                            <!-- Central focal point & pulse ring -->
+                            <circle cx="160" cy="160" r="5" fill="#F0F5FF" class="ll-lens-focal-point" />
+                            <circle cx="160" cy="160" r="10" stroke="#69E4D0" stroke-width="1.2" class="ll-lens-focal-pulse" />
+                        </svg>
                     </div>
 
-                    <div class="form-grid form-grid-2">
-                        <div class="form-group">
-                            <label for="investmentTotal">Total Investment Requested <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>INVESTMENT_TOTAL</code> (Numeric &gt; 0)</span>
-                            <div class="input-wrapper">
-                                <span class="input-affix">$</span>
-                                <input type="number" id="investmentTotal" class="form-control" placeholder="50000.00" step="0.01" min="0.01" required>
-                            </div>
-                            <div id="investmentTotalFeedback" class="invalid-feedback">Please enter a valid amount greater than 0.</div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="accCurrentBalance">Current Account Balance <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>ACCCURRENTBALANCE</code> (May be negative)</span>
-                            <div class="input-wrapper">
-                                <span class="input-affix">$</span>
-                                <input type="number" id="accCurrentBalance" class="form-control" placeholder="15000.00" step="0.01" required>
-                            </div>
-                            <div id="accCurrentBalanceFeedback" class="invalid-feedback">Please enter a valid numeric balance.</div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="installSize">Installment Size <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>INSTALL_SIZE</code> (Numeric &gt; 0)</span>
-                            <div class="input-wrapper">
-                                <span class="input-affix">$</span>
-                                <input type="number" id="installSize" class="form-control" placeholder="1200.00" step="0.01" min="0.01" required>
-                            </div>
-                            <div id="installSizeFeedback" class="invalid-feedback">Please enter a valid installment size.</div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="duePayment">Due Payment Amount <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>DUE_PAYMENT</code> (Numeric &ge; 0)</span>
-                            <div class="input-wrapper">
-                                <span class="input-affix">$</span>
-                                <input type="number" id="duePayment" class="form-control" placeholder="0.00" step="0.01" min="0" required>
-                            </div>
-                            <div id="duePaymentFeedback" class="invalid-feedback">Please enter a valid non-negative amount.</div>
-                        </div>
+                    <!-- Eyebrow Tag -->
+                    <div class="ll-eyebrow">
+                        <span>CREDIT ANALYTICS</span>
+                        <span class="ll-eyebrow-sep">/</span>
+                        <span>EVALUATION WORKFLOW</span>
                     </div>
-                </div>
 
-                <!-- Section 2: Categorical & Applicant Details -->
-                <div class="form-section">
-                    <div class="form-section-header">
-                        <span class="section-badge">02</span>
-                        <span class="form-section-title">Categorical &amp; Applicant Details</span>
-                    </div>
-                    <p class="section-note">
-                        * Categorical values are preserved as raw strings to match model training without synthetic encoding discrepancies.
+                    <!-- Primary Headline -->
+                    <h1 class="ll-headline">
+                        A clearer view of <span class="ll-accent-text">loan data.</span>
+                    </h1>
+
+                    <!-- Supporting Copy -->
+                    <p class="ll-subtitle">
+                        Explore application features, inspect model output, and trace each evaluation through one transparent workflow.
                     </p>
 
-                    <div class="form-grid form-grid-2">
-                        <div class="form-group">
-                            <label for="infMaritalStatus">Marital Status <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>INF_MARITAL_STATUS</code> (Max 30 chars)</span>
-                            <input type="text" id="infMaritalStatus" class="form-control" placeholder="e.g. Married, Single, Divorced" maxlength="30" required>
-                            <div id="infMaritalStatusFeedback" class="invalid-feedback">Marital status is required.</div>
+                    <!-- Workflow Signal Indicator -->
+                    <div class="ll-workflow-signal" aria-label="Analytical Pipeline Sequence">
+                        <div class="ll-signal-step">
+                            <span class="ll-signal-num">01</span>
+                            <span class="ll-signal-name">INPUT</span>
                         </div>
-
-                        <div class="form-group">
-                            <label for="infGender">Gender <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>INF_GENDER</code> (Max 10 chars)</span>
-                            <input type="text" id="infGender" class="form-control" placeholder="e.g. M, F" maxlength="10" required>
-                            <div id="infGenderFeedback" class="invalid-feedback">Gender is required.</div>
+                        <div class="ll-signal-connector" aria-hidden="true">
+                            <span class="ll-signal-pulse"></span>
                         </div>
-
-                        <div class="form-group">
-                            <label for="compensationCharged">Compensation Charged <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>COMPENSATION_CHARGED</code> (Max 30)</span>
-                            <input type="text" id="compensationCharged" class="form-control" placeholder="e.g. None, Waived, Charged" maxlength="30" required>
-                            <div id="compensationChargedFeedback" class="invalid-feedback">Compensation status is required.</div>
+                        <div class="ll-signal-step">
+                            <span class="ll-signal-num">02</span>
+                            <span class="ll-signal-name">INFERENCE</span>
                         </div>
-
-                        <div class="form-group">
-                            <label for="clientType">Client Type <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>CLIENT_TYPE</code> (Max 30 chars)</span>
-                            <input type="text" id="clientType" class="form-control" placeholder="e.g. Individual, Corporate" maxlength="30" required>
-                            <div id="clientTypeFeedback" class="invalid-feedback">Client type is required.</div>
+                        <div class="ll-signal-connector" aria-hidden="true">
+                            <span class="ll-signal-pulse"></span>
                         </div>
-
-                        <div class="form-group full-span">
-                            <label for="repayMode">Repayment Mode <span class="req">*</span></label>
-                            <span class="field-hint">Feature: <code>REPAY_MODE</code> (Max 30 chars)</span>
-                            <input type="text" id="repayMode" class="form-control" placeholder="e.g. Monthly, Quarterly, Bullet" maxlength="30" required>
-                            <div id="repayModeFeedback" class="invalid-feedback">Repayment mode is required.</div>
+                        <div class="ll-signal-step">
+                            <span class="ll-signal-num">03</span>
+                            <span class="ll-signal-name">RECORD</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- Form Action Controls -->
-                <div class="form-actions">
-                    <button type="submit" id="submitBtn" class="btn btn-primary">
-                        <span id="submitSpinner" class="spinner" style="display: none;" aria-hidden="true"></span>
-                        <span id="submitText">Evaluate Application</span>
-                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </button>
-                    <button type="button" id="resetBtn" class="btn btn-secondary">
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/>
-                            <path d="M3 3v5h5"/>
-                        </svg>
-                        Reset Form
-                    </button>
-                </div>
+                    <!-- Primary and Secondary Actions -->
+                    <div class="ll-actions">
+                        <a href="workspace.jsp" class="ll-enter-btn">
+                            Enter Workspace <span class="ll-btn-arrow" aria-hidden="true">&rarr;</span>
+                        </a>
+                        <a href="#workflow-details" class="ll-explore-link">
+                            Explore the workflow <span aria-hidden="true">&darr;</span>
+                        </a>
+                    </div>
 
-            </form>
+                </div>
+            </div>
         </section>
 
-        <!-- Column 2: Prediction Results Panel -->
-        <section class="card spotlight-card result-card" id="resultCard" data-reveal="up" data-reveal-stagger="1">
-            <div class="card-glow" aria-hidden="true"></div>
-            <div class="card-header-clean">
-                <div>
-                    <h2 class="card-title">Prediction &amp; Model Output</h2>
-                    <p class="card-subtitle">Real-time response returned from the backend application workflow.</p>
-                </div>
-            </div>
+        <!-- Detailed Workflow Cards Section -->
+        <section id="workflow-details" class="ll-workflow-section" tabindex="-1">
+            <div class="ll-container">
 
-            <!-- Empty / Standby Placeholder State -->
-            <div id="resultPlaceholder" class="result-placeholder">
-                <div class="placeholder-icon-wrap" aria-hidden="true">
-                    <svg width="44" height="44" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.3">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-                    </svg>
+                <div class="ll-section-header ll-reveal">
+                    <span class="ll-section-badge">PIPELINE ARCHITECTURE</span>
+                    <h2 class="ll-section-title">How the Evaluation Workflow Operates</h2>
+                    <p class="ll-section-desc">
+                        Every submission follows a deterministic three-stage architecture separating validation, model inference, and operational storage.
+                    </p>
                 </div>
-                <div class="placeholder-title">No evaluation submitted yet</div>
-                <div class="placeholder-desc">
-                    Enter the applicant details on the left and click <strong>Evaluate Application</strong> to generate an application record and request model prediction.
-                </div>
-            </div>
 
-            <!-- Active Populated Result Container -->
-            <div id="resultBox" class="result-box">
+                <div class="ll-workflow-grid">
 
-                <!-- Header Outcome Badge and Record Status -->
-                <div class="result-banner-header">
-                    <div>
-                        <span class="outcome-label">PREDICTED CLASS</span>
-                        <div id="resClass" class="result-tag tag-class-g">CLASS G</div>
+                    <!-- Card 01: Input -->
+                    <div class="ll-workflow-card ll-reveal">
+                        <div class="ll-card-header">
+                            <span class="ll-card-step-badge">01</span>
+                            <div class="ll-card-icon-wrap" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                    <polyline points="10 9 9 9 8 9"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="ll-card-title">01 — Input</h3>
+                        <p class="ll-card-body">
+                            Provide the nine application features required by the current model interface.
+                        </p>
                     </div>
-                    <div class="record-status-wrap">
-                        <span class="outcome-label">WORKFLOW STATUS</span>
-                        <div class="record-status-pill">
-                            <span class="status-dot dot-success" aria-hidden="true"></span>
-                            RECORDED
+
+                    <!-- Card 02: Inference -->
+                    <div class="ll-workflow-card ll-reveal">
+                        <div class="ll-card-header">
+                            <span class="ll-card-step-badge">02</span>
+                            <div class="ll-card-icon-wrap" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="ll-card-title">02 — Inference</h3>
+                        <p class="ll-card-body">
+                            The configured prediction provider returns a class and associated model metadata.
+                        </p>
+                    </div>
+
+                    <!-- Card 03: Record -->
+                    <div class="ll-workflow-card ll-reveal">
+                        <div class="ll-card-header">
+                            <span class="ll-card-step-badge">03</span>
+                            <div class="ll-card-icon-wrap" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                                    <polyline points="17 21 17 13 7 13 7 21"/>
+                                    <polyline points="7 3 7 8 15 8"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="ll-card-title">03 — Record</h3>
+                        <p class="ll-card-body">
+                            The application records the submitted features and prediction output according to the active storage configuration.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Demonstration Disclosure Banner -->
+                <div class="ll-disclaimer-wrap ll-reveal">
+                    <div class="ll-disclaimer-card" role="region" aria-label="Demonstration Notice">
+                        <div class="ll-disclaimer-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                <line x1="12" y1="9" x2="12" y2="13"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17"/>
+                            </svg>
+                        </div>
+                        <div class="ll-disclaimer-text">
+                            <strong>DEMONSTRATION DISCLOSURE:</strong>
+                            This project is a development demonstration. The configured provider may return simulated predictions. A model label is not, by itself, a verified loan-default determination or a lending approval/rejection decision.
                         </div>
                     </div>
-                </div>
-
-                <!-- Probability Visual Progress Gauge -->
-                <div class="prob-gauge-container">
-                    <div class="prob-gauge-labels">
-                        <span class="gauge-caption">Model-Reported Class B Probability</span>
-                        <span class="gauge-threshold">Threshold: <strong id="resGaugeThreshold">0.3000</strong></span>
-                    </div>
-                    <div class="gauge-track" aria-hidden="true">
-                        <div id="resProbBar" class="gauge-bar" style="width: 0%;"></div>
-                        <div class="gauge-marker" style="left: 30%;" title="Decision Threshold: 0.3000"></div>
-                    </div>
-                    <div class="gauge-note">Model-reported probability for Class B. This does not represent a verified financial default probability.</div>
-                </div>
-
-                <!-- 4 High-Contrast Analytics Metric Tiles -->
-                <div class="stat-grid">
-                    <div class="stat-item">
-                        <div class="stat-label">Application ID</div>
-                        <div id="resAppId" class="stat-value">#1001</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-label">Prediction ID</div>
-                        <div id="resPredId" class="stat-value">#5001</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-label">Class B Probability</div>
-                        <div id="resProb" class="stat-value">20.00%</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-label">Decision Threshold</div>
-                        <div id="resThreshold" class="stat-value">0.3000</div>
-                    </div>
-                </div>
-
-                <!-- Metadata Specification Table -->
-                <div class="meta-section">
-                    <div class="meta-row">
-                        <span class="meta-label">Model Version:</span>
-                        <span id="resModel" class="meta-val">mock-v1-simulated</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-label">Evaluation Timestamp:</span>
-                        <span id="resTime" class="meta-val">2026-10-16 04:00:00</span>
-                    </div>
-                    <div class="meta-row">
-                        <span class="meta-label">Inference Nature:</span>
-                        <span class="meta-val"><span id="resInferenceNature" class="nature-chip">Simulated / Mock Provider</span></span>
-                    </div>
-                </div>
-
-                <!-- Dynamic Disclaimer Notification Box -->
-                <div id="resDisclaimerBox" class="result-disclaimer">
-                    <strong>Demo Notice:</strong> This output was generated by <code>MockPredictionProvider</code> using a simulated heuristic. Class B reflects the experimental dataset label and does not represent an underwriting approval, rejection, or verified legal loan default.
                 </div>
 
             </div>
         </section>
-
     </main>
 
-    <!-- Clean Technical Footer -->
-    <footer class="app-footer" data-reveal="up">
-        <div class="footer-tech-stack">
-            <span>Java 21 LTS</span>
-            <span class="footer-sep">•</span>
-            <span>Apache Tomcat 10.1</span>
-            <span class="footer-sep">•</span>
-            <span>Dual Storage (In-Memory / Oracle XE)</span>
-            <span class="footer-sep">•</span>
-            <span>Modular ML Provider</span>
-        </div>
-        <div class="footer-copy">
-            Loan Risk Intelligence Workspace — Developed with strict separation of concerns &amp; zero external UI dependencies.
+    <!-- Understated Product Footer -->
+    <footer class="ll-footer">
+        <div class="ll-container">
+            <div class="ll-footer-inner">
+                <div class="ll-footer-brand">
+                    <span>LoanLens</span>
+                    <span aria-hidden="true">&bull;</span>
+                    <span>Loan Quality Analytics Demonstration</span>
+                </div>
+                <div>
+                    <a href="workspace.jsp" class="ll-footer-link">
+                        Enter Workspace <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
-</div>
-
-<script src="js/app.js"></script>
+    <!-- Self-contained Intro Script -->
+    <script src="js/intro.js"></script>
 </body>
 </html>
